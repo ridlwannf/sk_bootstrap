@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="app.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg" id="navbar">
+    <nav class="navbar fixed-top navbar-expand-lg" id="navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="#home">MUSEUM</a>
         <button
@@ -43,6 +43,69 @@
       </div>
     </nav>
 
+    <section class="container-fluid px-0">
+      <div class="row align-items-center content" id="home">
+        <div class="col-lg-6">
+          <div class="text-white text-center d-none d-lg-block" id="title-head">
+            <h1>MUSEUM OF DINO</h1>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img class="img-fluid" src="images/1.jpg" alt="image-1" />
+        </div>
+      </div>
+
+      <div class="row align-items-center content" id="about">
+        <div class="col-md-6 order-2 order-md-1">
+          <img src="images/3.jpg" alt="image-2" class="img-fluid" />
+        </div>
+        <div class="col-md-6 text-center order-1">
+          <div class="row justify-content-center">
+            <div class="col-10 col-lg-8 blurb pt-3">
+              <h2>Museum of Ark</h2>
+              <img
+                src="images/logo.png"
+                alt="logo"
+                height="60"
+                class="d-none d-lg-inline"
+              />
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+                nemo quasi, voluptas nesciunt, est minima sit molestias nobis
+                nulla sunt voluptatibus dicta quis consequatur! Natus architecto
+                nobis nesciunt impedit quo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center content" id="ticket">
+        <div class="col-md-6 order-2 order-md-1">
+          <img src="images/2.jpg" alt="image-2" class="img-fluid" />
+        </div>
+        <div class="col-md-6 text-center">
+          <div class="row justify-content-center">
+            <div class="col-10 col-lg-8 blurb pt-3">
+              <h2>Museum of Ark</h2>
+              <img
+                src="images/logo.png"
+                alt="logo"
+                height="60"
+                class="d-none d-lg-inline"
+              />
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+                nemo quasi, voluptas nesciunt, est minima sit molestias nobis
+                nulla sunt voluptatibus dicta quis consequatur! Natus architecto
+                nobis nesciunt impedit quo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -53,5 +116,13 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(function () {
+        $(document).sroll(function () {
+          let $nav = $("#navbar");
+          $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script>
   </body>
 </html>
